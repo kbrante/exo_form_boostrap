@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>exo form bootstrap</title>
+
+    <link rel="stylesheet" href="static/external/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form>
+                <div class="col-xs-12" >
+                    <label>Pseudonyme</label>
+                    <input type="text" name="pseudo" value="" placeholder="pseudonyme" class="form-control" id="pseudo">
+
+                </div>
+                <div class="col-xs-6">
+                    <label>Mot de passe</label>
+                    <input type="password" name="mdp" value="" placeholder="mot de passe" class="form-control"  id="password">
+                </div>
+                <div class="col-xs-6">
+                    <label>Confirmation</label>
+                    <input type="password" name="verifmdp" value="" placeholder="confirmation " class="form-control"  id="password2">
+                </div>
+                <div class="col-xs-12">
+                    <label>E-mail</label>
+                    <input type="email" name="email" value="" placeholder="email" class="form-control" id="email">
+                </div>
+                    <input type="reset" name="reset" value="Reset" class="btn btn-default btn-lg" id="reset">
+                    <input type="submit" name="submit" value="Submit" class="btn btn-default btn-lg" id="submit">
+            </form>
+        </div>
+    </div>
+    <script src="./static/external/jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="static/external/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="static/js/script.js" charset="utf-8"></script>
+</body>
+
+</html>
