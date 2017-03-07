@@ -14,35 +14,40 @@
 <body>
     <div class="container">
         <div class="row">
-            <form>
-                <div class="col-xs-12">
-                    <label>Pseudonyme</label>
-                    <input type="text" name="pseudo" value="" placeholder="pseudonyme" class="form-control" id="pseudo">
-
+            <form data-toggle="validator" role="form">
+                <div class="form-group">
+                    <label for="inputName" class="control-label">Pseudonyme</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Pseudonyme" data-minlength="5" required>
                 </div>
-                <div class="col-xs-6">
-                    <label>Mot de passe</label>
-                    <input type="password" name="mdp" value="" placeholder="mot de passe" class="form-control" id="password">
+                <div class="form-group">
+                    <label for="inputEmail" class="control-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" data-minlength="5" required>
+                    <div class="help-block with-errors"></div>
                 </div>
-                <div class="col-xs-6">
-                    <label>Confirmation</label>
-                    <input type="password" name="verifmdp" value="" placeholder="confirmation " class="form-control" id="password2">
-                </div>
-                <div class=" col-xs-12">
-                    <label>E-mail</label>
-                    <div class="input-group">
-                        <span class="input-group-addon">@</span>
-                        <input type="email" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
-
+                <div class="form-group">
+                    <label for="inputPassword" class="control-label">Password</label>
+                    <div class="form-inline row">
+                        <div class="form-group col-sm-6">
+                            <input type="password" data-minlength="5" class="form-control" id="inputPassword" placeholder="Password" required>
+                            <div class="help-block">Minimum of 5 characters</div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
                     </div>
                 </div>
-                <input type="reset" name="reset" value="Reset" class="btn btn-default btn-lg" id="reset">
-                <input type="submit" name="submit" value="Submit" class="btn btn-default btn-lg btn-primary" id="submit">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" name="button" class="btn btn-default">Reset</button>
+                </div>
             </form>
         </div>
     </div>
     <script src="./static/external/jquery/dist/jquery.js" charset="utf-8"></script>
     <script src="static/external/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="static/external/bootstrap-validator/dist/validator.js" charset="utf-8"></script>
+    <script src="static/external/pwstrength-bootstrap/dist/pwstrength-bootstrap.js" charset="utf-8"></script>
     <script src="static/js/script.js" charset="utf-8"></script>
 </body>
 
